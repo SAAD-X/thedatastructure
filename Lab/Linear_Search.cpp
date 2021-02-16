@@ -3,25 +3,24 @@ using namespace std;
 
 int main()
 {
-    int mimo[10]= {32,4,5,12,5,54,6,23,3,5};
-    int i,n;
+    int mimo[10]= {8,4,6,1,6,9,6,1,9,8};
+    int i,n,a=0, flag = 0;
 
-    cout<< "Enter the number to be searched:" << endl;
+    cout<< "Input a number to search:";
     cin>>n;
 
     for (i = 0; i < 10; i++)
     {
         if(n==mimo[i])
         {
-            cout << n << " was found in index" << i << " of the array "<<endl;
-        }
-        else
-        {
-            if (i==9)
-            {
-                cout<<"Element not found"<<endl;
-            }
+            a++;
+            flag = 1;
         }
     }
+    if (flag == 0)
+    {
+        cout<<"Element not found"<<endl;
+    }
+    cout<<"The number occurs "<<a<<" times in the array"<<endl;
     return 0;
 }
